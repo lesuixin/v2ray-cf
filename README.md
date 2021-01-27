@@ -2,9 +2,9 @@
 
 # v2ray套CF无域名加速的小白教程  
 ## 参考资料：  
-llmwxt的[小白教程]CF Workers实现直接套CF加速。https://www.hostloc.com/thread-781847-1-1.html
+#### llmwxt的[小白教程]CF Workers实现直接套CF加速。https://www.hostloc.com/thread-781847-1-1.html
 
-CCChieh的IBMYes教程。https://github.com/CCChieh/IBMYes
+#### CCChieh的IBMYes教程。https://github.com/CCChieh/IBMYes
 
 ### 第一步：v2ray脚本，端口80的websocket，不要TLS。不能用随机端口。  
 
@@ -27,9 +27,9 @@ CCChieh的IBMYes教程。https://github.com/CCChieh/IBMYes
     }  
 > )  
 
-修改hostname后面的ip为vps服务器的地址，.xip.io要留着，那个是一个公共项目，可以把ip转成域名。  
+#### 修改hostname后面的ip为vps服务器的地址，.xip.io要留着，那个是一个公共项目，可以把ip转成域名。  
 
-点击中间HTTP下面GET右边按钮send发送，测试几次是否出现400 Bad Request，出现则成功，点击保存并部署。（不能是502 Bad Gateway或是其它）（用原先不用.xip.io的会出现502）  
+#### 点击中间HTTP下面GET右边按钮send发送，测试几次是否出现400 Bad Request，出现则成功，点击保存并部署。（不能是502 Bad Gateway或是其它）（用原先不用.xip.io的会出现502）  
 
 ### 第三步：地址改为改名.取名.workers.dev，用工具找CF自选ip，看IBMYes教程的设置改用自选ip当地址。设置好后完成。  
 
