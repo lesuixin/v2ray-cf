@@ -24,8 +24,8 @@ addEventListener(
   }
 )
 ```
-修改hostname后面的ip为服务器的地址，.xip.io要留着，那个是一个公共项目，可以把ip转成域名。  
-.xip.io不能访问，修改为.nip.io  
+修改url.hostname后面的ip为服务器的地址，.nip.io要留着，那个是一个公共项目，可以把ip转成域名。  
+.xip.io不能访问，修改为.nip.io，备用sslip.io  
 
 #### 点击中间HTTP下面GET右边按钮send发送，测试几次是否出现400 Bad Request，出现则成功，点击保存并部署（不能是502 Bad Gateway或是其它）（用原先不用.nip.io的会出现502）  
 ![image1](https://github.com/ccchieh/IBMYes/raw/master/img/README/image-20200615214543839.png)  
@@ -38,5 +38,5 @@ addEventListener(
 ![image](https://github.com/ccchieh/IBMYes/blob/master/img/README/image-20200615215820188.png)
 
 ### 来自suixin from suixin
-### 2021-5-1 xip.io失效，重写
-#### 疑问：没有域名可以开TLS吗？（有TLS的用随机端口，可以443）  
+### 2021-5-1 xip.io失效，重写 修改为.nip.io，备用sslip.io
+#### 疑问：没有域名可以开TLS吗？（有TLS的用随机端口，可以443）
