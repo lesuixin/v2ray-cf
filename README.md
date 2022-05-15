@@ -40,3 +40,30 @@ addEventListener(
 ### 来自suixin from suixin
 ### 2021-5-1 xip.io失效，重写 修改为.nip.io，备用sslip.io
 #### 疑问：没有域名可以开TLS吗？（有TLS的用随机端口，可以443）
+
+#### 2022-5-15 更新
+## Cloudflare无域名加速失效
+### workers.dev被全面dns污染，被sni阻断，无法直连*.workers.dev
+
+#### 需要改用Workers自定义域名  
+进入DNS选项，解析CNAME你的域名到Workers，打开小云朵  
+配置Workers路由  
+添加路由，域名要填：你的域名/*  
+
+想要自选 IP，那么只需要在添加子域名记录的时候，不开启代理（橙色 ☁），直接指向自选 IP 即可。  
+
+原IBMYes的Workers代码
+```
+addEventListener(
+"fetch",event => {
+let url=new URL(event.request.url);
+url.hostname="cf.cloud";
+let request=new Request(url,event.request);
+event. respondWith(
+fetch(request)
+)
+}
+)
+```
+修改第四行为你的域名
+
